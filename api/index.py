@@ -11,6 +11,6 @@ def search_images(q: str = "", max_results: int = 20):
         return { "results": [] }
 
     # DuckDuckGo で画像検索を行い, 結果を格納
-    results = DDGS().images(q, "ja-jp", max_results = max_results)
+    results = DDGS().images(q, "ja-jp", license_image = "Share", max_results = max_results)
 
     return { "results": results }
